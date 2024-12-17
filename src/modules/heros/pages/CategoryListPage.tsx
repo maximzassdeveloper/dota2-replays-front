@@ -37,17 +37,20 @@ export const CategoryListPage: FC = () => {
     //     {
     //       id: 1,
     //       name: 'Strength',
-    //       imageUrl: 'https://example.com/strength.jpg',
+    //       imageUrl:
+    //         'https://static.wikia.nocookie.net/dota2_gamepedia/images/7/7a/Strength_attribute_symbol.png',
     //     },
     //     {
     //       id: 2,
     //       name: 'Agility',
-    //       imageUrl: 'https://example.com/agility.jpg',
+    //       imageUrl:
+    //         'https://static.wikia.nocookie.net/dota2_gamepedia/images/2/2d/Agility_attribute_symbol.png',
     //     },
     //     {
     //       id: 3,
     //       name: 'Intelligence',
-    //       imageUrl: 'https://example.com/intelligence.jpg',
+    //       imageUrl:
+    //         'https://static.wikia.nocookie.net/dota2_gamepedia/images/5/56/Intelligence_attribute_symbol.png',
     //     },
     //   ],
     // } as any,

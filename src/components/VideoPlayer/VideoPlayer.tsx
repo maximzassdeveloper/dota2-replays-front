@@ -18,6 +18,7 @@ import { PlayerLoader } from './components/PlayerLoader/PlayerLoader'
 import { useShallow } from 'zustand/shallow'
 import { VideoPlayerProvider } from './store/videoPlayerContext'
 import { VideoPlayerKeyHandler } from './components/VideoPlayerKeyHandler'
+import { AUTH_TOKEN_KEY } from '../../modules/auth'
 
 export interface VideoPlayerProps extends Omit<VideoHTMLAttributes<HTMLVideoElement>, 'src'> {
   sources?: VideoSource[]
@@ -106,7 +107,12 @@ export const VideoPlayerInner: FC<VideoPlayerProps> = (props) => {
     if (!video) return
 
     if (Hls.isSupported()) {
-      const hls = new Hls()
+      const hls = new Hls({
+        xhrSetup: function (xhr) {
+          xhr.setRequestHeader('Authorization', localStorage.getItem(AUTH_TOKEN_KEY) || '')
+        },
+      })
+
       hls.loadSource(hlsFile)
       hls.attachMedia(video)
 

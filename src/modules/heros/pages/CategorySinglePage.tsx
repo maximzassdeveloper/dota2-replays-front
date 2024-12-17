@@ -59,13 +59,14 @@ export const CategorySinglePage: FC = () => {
     //     {
     //       id: 1,
     //       name: 'Axe',
-    //       imageUrl: 'https://example.com/axe.jpg',
+    //       imageUrl:
+    //         'https://static.wikia.nocookie.net/dota2_gamepedia/images/a/a1/Queen_of_Pain_icon.png',
     //       categoryId: 1,
     //     },
     //     {
     //       id: 2,
     //       name: 'Earthshaker',
-    //       imageUrl: 'https://example.com/earthshaker.jpg',
+    //       imageUrl: 'https://static.wikia.nocookie.net/dota2_gamepedia/images/2/2f/Jakiro_icon.png',
     //       categoryId: 1,
     //     },
     //     {
