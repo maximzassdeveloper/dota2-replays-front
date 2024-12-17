@@ -1,0 +1,133 @@
+.wrapper {
+  position: relative;
+}
+
+.settings {
+  background-color: rgba(0, 0, 0, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+  border-radius: 5px;
+  width: 200px !important;
+}
+
+.settingsPopover {
+  position: absolute;
+  z-index: 100;
+  right: 0;
+  bottom: calc(100% + 15px);
+}
+
+.settingItem {
+  width: 100%;
+  padding: 8px 15px;
+  text-align: left;
+  transition: background-color 0.2s;
+  color: #fff;
+
+  &.active {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+}
+
+.screen {
+  width: 100%;
+}
+
+/* .settings {
+  transition: 0.2s;
+  height: auto;
+}
+
+.alertSettings {
+  padding: 12px 14px;
+}
+
+.subSettings {
+  position: absolute;
+  top: 12px;
+  right: 0;
+  width: 100%;
+  padding: 0 14px;
+  z-index: 10;
+  background: black;
+  transform: translateX(100%);
+  transition: 0.2s;
+  &Header {
+    padding-bottom: 18px;
+    &:hover {
+      span,
+      i {
+        opacity: 0.8;
+      }
+    }
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    i {
+      font-size: 20px !important;
+      margin-right: 10px;
+      transition: 0.2s;
+    }
+    span {
+      font-size: 20px;
+      transition: 0.2s;
+    }
+  }
+  &Active {
+    transform: translateX(0);
+  }
+}
+
+.settingsItem,
+.subSettingsItem {
+  min-width: 320px;
+  padding: 8px 8px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.2s;
+  margin-bottom: 12px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+  &:hover {
+    background: grey;
+  }
+  h4,
+  span {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1em;
+    color: #fff;
+  }
+  span {
+    color: grey;
+  }
+}
+
+.settingsItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.subSettingsItem {
+  padding-left: 32px;
+  &.active {
+    position: relative;
+    display: flex;
+    align-items: center;
+    span {
+      color: #fff;
+    }
+    i {
+      position: absolute;
+      left: 4px;
+      color: aqua;
+      font-size: 20px;
+    }
+  }
+} */

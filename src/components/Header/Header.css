@@ -1,0 +1,32 @@
+.header {
+  padding: 15px 0;
+  background: var(--bg);
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+
+  a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  .logout {
+    margin-left: 20px;
+    color: #fff;
+    text-decoration: underline;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}
+

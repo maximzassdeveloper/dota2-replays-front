@@ -1,0 +1,25 @@
+.title {
+  margin-bottom: 5px;
+}
+
+.form {
+  width: 420px;
+  padding: 20px 30px 30px 30px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background: var(--bg);
+}
+
+.subText {
+  color: #ccc;
+  a {
+    color: var(--primary);
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
+

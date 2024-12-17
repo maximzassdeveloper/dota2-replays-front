@@ -1,0 +1,12 @@
+.panel {
+  position: relative;
+  overflow: hidden;
+  z-index: 2;
+  transition: width 200ms, height 200ms;
+}
+
+.screen {
+  position: absolute;
+  left: 0;
+  top: 0;
+}

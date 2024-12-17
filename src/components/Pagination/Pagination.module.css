@@ -1,0 +1,27 @@
+.list {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  list-style: none;
+}
+
+.item {
+  display: block;
+  list-style: none;
+  color: #fff;
+  background: black;
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+
+  &.active {
+    background: var(--primary);
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
