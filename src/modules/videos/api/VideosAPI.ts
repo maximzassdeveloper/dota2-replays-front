@@ -1,15 +1,11 @@
 import baseApi from '../../../services/api'
-import { PaginatedResponse } from '../../../types'
 import { Video } from '../types/videos'
 
 export interface GetVideosQueryParams {
   hero: string
-  page?: number
-  size?: number
-  sortBy?: string
 }
 
-export type GetVideosResponse = PaginatedResponse<Video>
+export type GetVideosResponse = Video[]
 
 export const getVideos = (params: GetVideosQueryParams) => {
   return baseApi.get<GetVideosResponse>('/video', { params })

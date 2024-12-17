@@ -1,24 +1,23 @@
 import { useQuery } from '@tanstack/react-query'
-import { useState, type FC } from 'react'
+import { type FC } from 'react'
 import { getVideos } from '../../api/VideosAPI'
 import { VideoCard } from '../VideoCard/VideoCard'
-import { Pagination } from '../../../../components/Pagination'
 
 interface VideosListProps {
   heroName: string
 }
 
-const VIDEOS_PER_PAGE = 10
+// const VIDEOS_PER_PAGE = 10
 export const VIDEOS_QUERY_KEY = 'getVideos'
 
 export const VideosList: FC<VideosListProps> = (props) => {
   const { heroName } = props
 
-  const [page, setPage] = useState(1)
+  // const [page, setPage] = useState(1)
 
   const getVideosQuery = useQuery({
-    queryKey: [VIDEOS_QUERY_KEY, { page, size: VIDEOS_PER_PAGE, heroName }],
-    queryFn: () => getVideos({ page, size: VIDEOS_PER_PAGE, hero: heroName }),
+    queryKey: [VIDEOS_QUERY_KEY, { heroName }],
+    queryFn: () => getVideos({ hero: heroName }),
     // enabled: false,
     // placeholderData: {
     //   data: {
@@ -68,8 +67,7 @@ export const VideosList: FC<VideosListProps> = (props) => {
     //   },
     // } as any,
   })
-  const results = getVideosQuery.data?.data
-  const videos = results?.content
+  const videos = getVideosQuery.data?.data || []
 
   return (
     <div>
@@ -83,7 +81,7 @@ export const VideosList: FC<VideosListProps> = (props) => {
         )}
       </div>
 
-      <Pagination page={page} onChange={setPage} total={results?.totalPages || 1} />
+      {/* <Pagination page={page} onChange={setPage} total={results?.totalPages || 1} /> */}
     </div>
   )
 }
