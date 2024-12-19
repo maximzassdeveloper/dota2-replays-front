@@ -15,7 +15,7 @@ export type RegisterResponse = {
 }
 
 export const register = (data: RegisterFormData) => {
-  return baseApi.post<RegisterResponse>('/auth/register', data)
+  return baseApi.post<RegisterResponse>('/auth/register', data, { withAuth: false })
 }
 
 export interface LoginFormData {
@@ -31,6 +31,6 @@ export type LoginResponse = {
 }
 
 export const login = (data: LoginFormData) => {
-  return baseApi.post<LoginResponse>('/auth/login', data)
+  return baseApi.post<LoginResponse>('/auth/login', data, { withAuth: false })
 }
 

@@ -23,7 +23,6 @@ export const RegisterPage: FC = () => {
   const registerMutation = useMutation({
     mutationFn: register,
     onSuccess(data) {
-      localStorage.setItem(AUTH_TOKEN_KEY, data.data.token)
       setUser(data.data)
 
       toast('Регистрация прошла успешно!', { type: 'success' })
