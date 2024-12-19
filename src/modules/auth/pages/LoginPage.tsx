@@ -24,7 +24,12 @@ export const LoginPage: FC = () => {
   const loginMutation = useMutation({
     mutationFn: login,
     onSuccess(data) {
-      setUser(data.data)
+      setUser({
+        id: data.data.id,
+        role: data.data.role,
+        username: data.data.username,
+      })
+      localStorage.setItem(AUTH_TOKEN_KEY, data.data.token)
       toast('Вход успешно выполнен!', { type: 'success' })
       form.reset()
       navigate('/')
